@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+
+     <!-- style.css -->
+     <link rel="stylesheet" href="CSS.css/product.css">
+     <link rel="stylesheet" href="CSS.css/style.css">
+ 
+     <!-- Bootstrap 5 CSS -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <title>Products</title>
+</head>
+<body>
+  <section>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/large.png" alt="Company Logo" class="Logo">
+          </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home </a>
+                </li>
+                <li class="nav-item1">
+                  <a class="nav-link" href="product.html">Product</a>
+                </li>
+                <li class="nav-item2">
+                  <a class="nav-link" href="category.html">Category</a>
+                </li>
+                <li class="nav-item3">
+                  <a class="nav-link" href="about.html">About us</a>
+                </li>
+                <li class="nav-item4">
+                  <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+              </ul>
+              <form class="d-flex ms-auto">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit"><a href="search.html">Search</a></button>            </form>
+            </div>
+            <a class="navbar-brand" href="cart.html">
+              <img src="images/grocery-store.png" alt="Cart" class="Logo2">
+            </a>
+          </nav>
+    </div>
+</section>
+
+    <section class="product-section">
+      <div class="container-fluid">
+        <h2 class="text-center mb-4">Products</h2>
+        <div class="row">
+          <!-- Left Sidebar : Filters -->
+          <div class="col-md-3">
+            <div class="filter-section">
+              <h5>Filters</h5>
+              <label for="price-range">Price Range:</label>
+              <input type="range" id="price-range" min="0" max="10000" step="100">
+              <span id="price-value">₹0</span>
+
+              <label for="categories">Categories:</label>
+              <select id="categories" multiple class="form-select">
+                <option value="electronics">Electronics</option>
+                <option value="clothing">Clothing</option>
+                <option value="groceries">Groceries</option>
+                <option value="home-appliances">Home Appliances</option>
+              </select>
+
+              <label for="sort-options">Sort By:</label>
+              <select id="sort-options" class="from-select">
+                <option value="a-to-z">A to Z</option>
+                <option value="most-rated">Most Rated</option>
+                <option value="price-low-to-high">Price: Low to High</option>
+                <option value="price-high-to-low">Price: High to Low</option>
+              </select>
+
+              <button id="filter-button" class="btn btn-primary mt-3">Apply Filters</button>
+            </div>
+          </div>
+
+          <!-- Right Section: Product Containers -->
+          <div class="col-md-9">
+            <div class="row">
+              <!-- Product Card-->
+              <div class="col-md-4 mb-4">
+                <div class="card" data-price="999" data-category="clothing" data-rating="4.5">
+                  <a href="product_detail.html"><img src="images/Joggers.jpg" class="card-img-top" alt="Shirt"></a>
+                  <div class="card-body">
+                    <h5 class="card-title"><a href="product_detail.html">Joggers</a></h5>
+                    <div class="product-rating">
+                      <span class="star">&#9733;</span>
+                      <span class="star">&#9733;</span>
+                      <span class="star">&#9733;</span>
+                      <span class="star">&#9733;</span>
+                      <span class="star">&#9734;</span>
+                    </div>
+                    <p class="card-text">₹999</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="card" data-price="1299" data-category="clothing" data-rating="4.5">
+                  <a href="product_detail.html"><img src="images/tshirt.jpg" class="card-img-top" alt="Jeans"></a>
+                  <div class="card-body">
+                    <h5 class="card-title"><a href="product_detail.html">Shirt</a></h5>
+                    <div class="product-rating">
+                      <span class="star">&#9733;</span>
+                      <span class="star">&#9733;</span>
+                      <span class="star">&#9733;</span>
+                      <span class="star">&#9733;</span>
+                      <span class="star">&#9733;</span>
+                    </div>
+                    <p class="card-text">₹1299</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="card" data-price="1099" data-category="clothing" data-rating="3">
+                  <a href="product_detail.html"><img src="images/Shorts.jpg" class="card-img-top" alt="Jeans"></a>
+                  <div class="card-body">
+                    <h5 class="card-title"><a href="product_detail.html">Shorts</a></h5>
+                    <div class="product-rating">
+                      <span class="star">&#9733;</span>
+                      <span class="star">&#9733;</span>
+                      <span class="star">&#9733;</span>
+                      <span class="star">&#9734;</span>
+                      <span class="star">&#9734;</span>
+                    </div>
+                    <p class="card-text">₹1099</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="card" data-price="2299" data-category="clothing" data-rating="3.5">
+                  <a href="product_detail.html"><img src="images/FemaleSuit.jpg" class="card-img-top" alt="Jeans"></a>
+                  <div class="card-body">
+                    <h5 class="card-title"><a href="product_detail.html">Blazer</a></h5>
+                    <div class="product-rating">
+                      <span class="star">&#9733;</span>
+                      <span class="star">&#9733;</span>
+                      <span class="star">&#9733;</span>
+                      <span class="star">&#9733;</span>
+                      <span class="star">&#9733;</span>
+                    </div>
+                    <p class="card-text">₹2299</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="card" data-price="1579" data-category="clothing" data-rating="3">
+                  <a href="product_detail.html"><img src="images/newlyJeans.jpg" class="card-img-top" alt="Jeans"></a>
+                  <div class="card-body">
+                    <h5 class="card-title"><a href="product_detail.html">Trendy Jeans</a></h5>
+                    <div class="product-rating">
+                      <span class="star">&#9733;</span>
+                      <span class="star">&#9733;</span>
+                      <span class="star">&#9733;</span>
+                      <span class="star">&#9734;</span>
+                      <span class="star">&#9734;</span>
+                    </div>
+                    <p class="card-text">₹1579</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="card" data-price="3000" data-category="clothing" data-rating="4.5">
+                  <a href="product_detail.html"><img src="images/Hoddie.jpg" class="card-img-top" alt="Jeans"></a>
+                  <div class="card-body">
+                    <h5 class="card-title"><a href="product_detail.html">Hoodie</a></h5>
+                    <div class="product-rating">
+                      <span class="star">&#9733;</span>
+                      <span class="star">&#9733;</span>
+                      <span class="star">&#9733;</span>
+                      <span class="star">&#9733;</span>
+                      <span class="star">&#9733;</span>
+                    </div>
+                    <p class="card-text">₹3000</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- Multi-Column Footer -->
+<footer class="footer">
+    <div class="footer-container">
+      <!-- About Us Section -->
+      <div class="footer-column">
+        <a href="about.html"><h3>About Us</h3></a>
+        <p>We are a leading e-commerce platform offering a wide range of products to meet your everyday needs. Our mission is to deliver the best shopping experience.</p>
+      </div>
+  
+      <!-- Quick Links Section -->
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="product.html">Shop</a></li>
+          <li><a href="#">Offers</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+  
+      <!-- Customer Service Section -->
+      <div class="footer-column">
+        <h3>Customer Service</h3>
+        <ul>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Order Tracking</a></li>
+        </ul>
+      </div>
+  
+      <!-- Contact Information Section -->
+      <div class="footer-column">
+        <a href="contact.html"><h3>Contact Us</h3></a>
+        <p>123 Main St, City, Country</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>Email: info@Rudreshnaidu.com</p>
+      </div>
+  
+      <!-- Map Section -->
+      <div class="footer-column">
+        <h3>Our Location</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=" width="100%" height="150" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+      </div>
+    </div>
+  
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p>© 2024 E-Commerce Website. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTopBtn" class="scroll-to-top-btn" aria-label="Scroll to top">
+    ↑
+  </button>
+  
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
+              integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
+              crossorigin="anonymous">
+      </script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" 
+              integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" 
+              crossorigin="anonymous">
+      </script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" 
+              integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" 
+              crossorigin="anonymous">
+      </script>
+      <!-- Bootstrap 5 JS Bundle
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+      -->
+      <!-- index.js -->
+      <script src="index.js"></script>    
+</body>
+</html>

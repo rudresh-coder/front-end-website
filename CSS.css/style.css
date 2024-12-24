@@ -1,0 +1,420 @@
+.Logo, .Logo2 {
+    width: 50px; 
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.navbar-nav .nav-link {
+    font-weight: bold;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    /* Removing or adjusting the following line */
+    /* justify-content: center; */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #0056b3;
+    background-color: #f8f9fa;
+    border-radius: 0.25rem;
+}
+
+.Logo2 {
+    padding-left: 1rem;
+} 
+
+button a {
+  text-decoration: none;
+  color: #50C878;;
+}
+
+button a:hover {
+  color: white;
+}
+
+/* Set a fixed height for the carousel */
+.carousel-inner {
+    width: 100%;
+    height: 650px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .carousel-item img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    margin: auto;
+    object-fit: cover; /* Ensures the image covers the entire area */
+    object-position: center;
+  }
+
+ .carousel-control-prev,
+ .carousel-control-next{
+    filter: invert(100%); /* Ensures control icons are visible on light backgrounds */
+    border-radius: 50%;
+}
+
+/* Heading Style */
+h2 {
+    font-size: 2.5rem; 
+    font-weight: 700; 
+    color: #333; 
+    text-align: center; 
+    margin-bottom: 2rem; /* Space below the heading */
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    border-bottom: 2px solid #007bff; 
+    padding-bottom: 0.5rem; /* Space between text and border */
+    position: relative; /* Position relative for decorative elements */
+}
+
+ .card {
+    height: 500px; /* Adjust the height as needed */
+    display: flex;
+    flex-direction: column;
+    border: 0.5px solid #ddd;
+    border-radius: 0.25rem; /* Rounded corners */
+    overflow: hidden; /* Ensure rounded corners apply to images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.4s ease; 
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.05); /* size change on hovering */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card-img-top {
+    height: 350px; /* images height */
+    object-fit: cover;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Aligns content at the bottom */
+    flex: 1; /* Ensures the card body expands to fill available space */
+}
+
+.latest-products{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.latest-products h2 {
+    font-size: 2.5rem;
+    color: #333;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.product-card-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping to the next line if there isn't enough space */
+    gap: 1rem; /* Space between product cards */
+    justify-content: center; /* Centers cards horizontally */
+  }
+
+.product-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    border-radius: 10px;
+    margin: 1rem;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.4s ease, transform 0.4s ease;
+    position: relative;
+    opacity: 0;
+    transition: opacity 1s ease-out, transform 0.4s ease;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: scale(0.9);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.latest-products .product-card .product-label{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ff5e5e;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border-radius: 1px;
+    text-transform: uppercase;
+}
+
+.product-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+
+  .product-details {
+    padding: 0.5rem 1rem;
+  }
+
+  .product-link {
+    text-decoration: none;
+    color: #50C878;
+    transition: color 0.3s ease;
+  }
+  
+  .product-link:hover {
+    color: #50C878; /* Change color on hover */
+  }
+
+.product-title {
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
+    text-transform: capitalize;
+    font-weight: bold;
+}  
+
+.product-rating {
+    /* display: flex; */
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+  .star{
+    font-size: 1rem;
+    color: #f7c700;
+    margin-right: 2px;
+  }
+
+  .product-price {
+    font-size: 1.25rem;
+    color: #333;
+    font-weight: bold;
+  }
+
+  /*slide in animation*/
+  @keyframes slideInFromLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInFromRight {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .slide-in-left, .slide-in-right {
+    opacity: 0; /*start hidden */
+    transition: opacity 1s ease-out;
+  }
+
+  .product-card.slide-in-left.active {
+    animation: slideInFromLeft 1s ease-out forwards;
+  }
+
+  .product-card.slide-in-right.active {
+    animation: slideInFromRight 1s ease-out forwards;
+  }
+
+.features-section {
+  padding: 4rem 2rem;
+  background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);  text-align: center;
+  text-align: center;
+}
+
+.features-section h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.features-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.feature-item {
+  width: 300px;
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.feature-item h3{
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.feature-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.feature-icon-delivery {
+  background-image: url('../images/deliver.png');
+}
+
+.feature-icon-shipping {
+  background-image: url('../images/shipping.png');
+}
+
+.feature-icon-support {
+  background-image: url('../images/help-desk.png');
+}
+
+.scroll-in {
+  opacity: 1; /* Show after scroll */
+  transform: translateY(0); /* Move into view */
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Applying animation when element is visible */
+.scroll-in {
+  animation: slideInFromBottom 1s ease-out forwards;
+}
+
+/* footer */
+.footer {
+  background-color: #e3f2fd;
+  color: #333;
+  padding: 40px 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 220px;
+  margin-bottom: 20px;
+}
+
+.footer h3 {
+  font-size: 1.25rem;
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+.footer p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #0056b3;
+}
+
+footer ul li {
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 2.5px solid #ddd;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-bottom {
+    padding-top: 10px;
+  }
+}
+
+/* Style for the Scroll to Top Button */
+.scroll-to-top-btn {
+  position: fixed;
+  bottom: 20px; 
+  right: 20px; 
+  background-color: #007bff; 
+  color: #fff; 
+  border: none;
+  border-radius: 50%;
+  width: 50px; 
+  height: 50px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  opacity: 0; 
+  transition: opacity 0.3s ease, transform 0.3s ease; 
+}
+
+.scroll-to-top-btn:hover {
+  background-color: #0056b3; 
+}
+
+.scroll-to-top-btn.show {
+  opacity: 1; /* Show the button */
+  transform: scale(1); /* Normal size */
+}

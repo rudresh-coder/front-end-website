@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section_title {
+    margin-bottom: 2rem;
+}
+
+.section_title h1 {
+    font-size: 2.5rem; 
+    font-weight: 700; 
+    color: #333; 
+    text-align: center; 
+    margin-bottom: 2rem; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    border-bottom: 2px solid #007bff; 
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem; 
+    position: relative; 
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.col {
+    flex: 1;
+    max-width: 30%;
+    margin: 1rem 0;
+}
+
+.contact-box {
+    border: 1px solid #28a745;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.contact-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+}
+
+.icon i {
+    color: #28a745;
+}
+
+.contact-box h3 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: #007bff;
+    transition: color 0.3s;
+}
+
+.contact-box:hover h3 {
+    color: #0056b3;
+}
+
+.form-container {
+    flex: 1;
+    max-width: 60%;
+    margin: 0 auto;
+    padding: 2rem;
+    border: 1.5px solid #28a745;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.address-container {
+    flex: 1;
+    max-width: 60%;
+    margin: 0 auto;
+    padding: 2rem;
+    border: 1.5px solid #28a745;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.map-container {
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .col {
+        max-width: 100%;
+    }
+
+    .form-container, .address-container {
+        max-width: 100%;
+    }
+}
